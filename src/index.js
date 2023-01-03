@@ -14,10 +14,16 @@ function loadScript(url) {
 	script.src = url;
 	document.body.appendChild(script);
 }
+function loadScriptContent(content) {
+	const script = document.createElement("script");
+	script.innerText = content;
+	document.body.appendChild(script);
+}
 
 // Check if we are on a Chromecast
 if (navigator.userAgent.includes("CrKey")) {
 	loadScript("//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js");
+	loadScriptContent("cast.framework.CastReceiverContext.getInstance().start();");
 } else {
 	window["__onGCastApiAvailable"] = (isAvailable) => {
 		console.log("__onGCastApiAvailable");
