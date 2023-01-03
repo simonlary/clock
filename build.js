@@ -5,10 +5,10 @@ await rm("build", { recursive: true, force: true });
 
 await build({
 	entryPoints: ["src/index.js"],
-	outdir: "build",
 	bundle: true,
-	minify: true,
 	format: "esm",
+	minify: true,
+	outdir: "build",
 });
 
 await cp("public", "build", { recursive: true });
