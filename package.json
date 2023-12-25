@@ -1,17 +1,14 @@
 {
-	"name": "clock",
-	"version": "1.0.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/simonlary/clock"
-	},
-	"type": "module",
-	"license": "MIT",
-	"scripts": {
-		"start": "node serve.js",
-		"build": "node build.js"
-	},
-	"dependencies": {
-		"esbuild": "^0.16.13"
-	}
+    "name": "clock",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "vite": "^5.0.8"
+    }
 }
