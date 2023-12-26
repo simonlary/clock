@@ -24,3 +24,12 @@ svg {
     padding: 1rem;
     max-width: 50rem;
 }
+
+google-cast-launcher {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
