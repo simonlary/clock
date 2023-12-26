@@ -20,9 +20,10 @@ function initClock() {
         timeStyle: "medium",
     });
 
+    text.textContent = formatter.format(new Date());
     setInterval(() => {
         text.textContent = formatter.format(new Date());
-        svg.setAttribute("viewBox", `0 -12 ${text.getBBox().width} 13`);
+        svg.setAttribute("viewBox", `0 -12 ${Math.ceil(text.getBBox().width)} 13`);
     }, 100);
 }
 
