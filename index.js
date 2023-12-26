@@ -14,13 +14,15 @@ function loadScript(src) {
 }
 
 function initClock() {
-    const clock = document.querySelector("text");
+    const svg = document.querySelector("svg");
+    const text = document.querySelector("text");
     const formatter = new Intl.DateTimeFormat(undefined, {
         timeStyle: "medium",
     });
 
     setInterval(() => {
-        clock.textContent = formatter.format(new Date());
+        text.textContent = formatter.format(new Date());
+        svg.setAttribute("viewBox", `0 -12 ${text.getBBox().width} 13`);
     }, 100);
 }
 
