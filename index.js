@@ -16,8 +16,9 @@ function loadScript(src) {
 function initClock() {
     const svg = document.querySelector("svg");
     const text = document.querySelector("text");
-    const formatter = new Intl.DateTimeFormat(undefined, {
+    const formatter = new Intl.DateTimeFormat("en-US", {
         timeStyle: "medium",
+        hour12: false,
     });
 
     text.textContent = formatter.format(new Date());
