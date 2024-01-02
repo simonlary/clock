@@ -18,14 +18,15 @@ function initClock() {
     const text = document.querySelector("text");
     const formatter = new Intl.DateTimeFormat("en-US", {
         timeStyle: "medium",
-        hour12: false,
+        hourCycle: "h23",
     });
 
-    text.textContent = formatter.format(new Date());
-    setInterval(() => {
+    function updateTime() {
         text.textContent = formatter.format(new Date());
         svg.setAttribute("viewBox", `0 -12 ${Math.ceil(text.getBBox().width)} 13`);
-    }, 100);
+        requestAnimationFrame(updateTime);
+    }
+    updateTime();
 }
 
 async function initReceiver() {
