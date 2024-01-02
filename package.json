@@ -1,6 +1,11 @@
 {
     "name": "clock",
     "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/simonlary/clock"
+    },
+    "license": "MIT",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
