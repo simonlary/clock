@@ -1,35 +1,35 @@
 @font-face {
-    font-family: "Saira";
-    src: url("saira.ttf");
+	font-family: "Saira";
+	src: url("saira.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #141b24;
-    color: white;
-    overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #141b24;
+	color: white;
+	overflow: hidden;
 }
 
 svg {
-    width: 100%;
-    padding: 1rem;
-    max-width: 50rem;
+	width: 100%;
+	padding: 1rem;
+	max-width: 50rem;
 }
 
 google-cast-launcher {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
 }
